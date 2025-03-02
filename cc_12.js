@@ -7,3 +7,11 @@ revenueCard.setAttribute('class', 'revenueCard'); // Set attribute
 revenueCard.setAttribute('id', 'metric-card'); // Set attribute
 dashboardQuery.appendChild(revenueCard); // Append metric
 
+// Task 2 Updating Dashboard Metrics – Working with NodeLists and Arrays
+
+const metricCard = document.querySelectorAll('.metric-card') // Select metric card
+const metricCardArray = Array.from(metricCard) // Turn metric card to array
+metricCardArray.forEach(card => {
+    card.innerHTML += '-Updated';
+    card.style.backgroundColor = 'lightpink'; // Change background color
+});
